@@ -5,8 +5,8 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    /* Добавляем отступ сверху равный высоте шапки */
-    padding-top: 60px;
+    /* Увеличиваем отступ для шапки */
+    padding-top: 70px;
 }
 
 .container {
@@ -18,13 +18,12 @@ body {
 }
 
 .section {
-    /* Уменьшаем отступы для мобильных устройств */
-    padding: 30px 0;
+    padding: 40px 0;
     text-align: center;
 }
 
 h2 {
-    font-size: 1.8em; /* Уменьшаем размер заголовка для мобильных */
+    font-size: 1.8em;
     margin-bottom: 20px;
 }
 
@@ -34,31 +33,35 @@ img {
     border-radius: 5px;
 }
 
+/* Исправленная шапка */
 header {
     position: fixed;
     top: 0;
-    width: 100%;
-    height: 60px;
+    left: 0;
+    right: 0;
+    height: 70px;
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
     z-index: 1000;
-    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    width: 100%;
     height: 100%;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
 header .logo {
-    font-size: 1.3em; /* Уменьшаем размер логотипа для мобильных */
+    font-size: 1.3em;
     font-weight: bold;
     transition: color 0.3s ease, text-shadow 0.3s ease;
+    white-space: nowrap;
 }
 
 header .logo:hover {
@@ -69,28 +72,54 @@ header .logo:hover {
 header .logo a {
     color: inherit;
     text-decoration: none;
-    display: block;
 }
 
 header nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
     display: flex;
-    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 header nav li {
-    margin-left: 10px; /* Уменьшаем отступы между пунктами меню */
+    margin-left: 15px;
 }
 
 header nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 0.8em; /* Уменьшаем размер шрифта меню */
+    font-size: 0.9em;
+    transition: color 0.3s ease;
 }
 
-/* Остальные стили остаются без изменений */
+header nav a:hover {
+    color: #f0ad4e;
+}
+
+/* Исправленные стили для education */
+#education .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#education .education-img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+#education .education-text {
+    text-align: center;
+    width: 100%;
+    padding: 0 15px;
+}
+
+/* Остальные стили остаются прежними */
 #about .container {
     display: flex;
     flex-wrap: wrap;
@@ -182,25 +211,6 @@ header nav a {
     margin-bottom: 5px;
 }
 
-#education .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-#education .education-img {
-    margin: 0 0 20px 0;
-    border: 2px solid black;
-    max-width: 120px;
-}
-
-#education .education-text {
-    text-align: left;
-    width: 100%;
-    padding: 0 15px;
-}
-
 #contact .contact-list {
     list-style: none;
     padding: 0;
@@ -228,104 +238,22 @@ footer {
     padding: 20px 0;
 }
 
-#industry-header {
-    background-color: #e9ecef;
-}
-
-#industry-header h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-#industry-header img {
-    max-width: 100%;
-    margin-top: 10px;
-}
-
-#rs_logo {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-}
-
-.skills_p {
-    width: 100%;
-    padding-top: 25px;
-    padding-left: 5%;
-    text-align: left;
-}
-
-.list-skills {
-    width: 100%;
-    padding-top: 25px;
-    padding-left: 5%;
-    text-align: left;
-}
-
-.list-skills li {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.list-skills li::before {
-    font-weight: bold;
-    margin-right: 1px;
-}
-
-.list-skills li:nth-child(1)::before { content: "1."; }
-.list-skills li:nth-child(2)::before { content: "2."; }
-.list-skills li:nth-child(3)::before { content: "3."; }
-.list-skills li:nth-child(4)::before { content: "4."; }
-.list-skills li:nth-child(5)::before { content: "5."; }
-.list-skills li:nth-child(6)::before { content: "6."; }
-.list-skills li:nth-child(7)::before { content: "7."; }
-
-.project_gis {
-    border: 1px solid black;
-    max-width: 100%;
-    height: 500px;
-    border-radius: 5px;
-}
-
-.project_security {
-    border: 1px solid black;
-    max-width: 100%;
-    height: 1000px;
-    border-radius: 5px;
-}
-
-#industry-description {
-    padding: 30px 0;
-    text-align: center;
-    margin: auto;
-    overflow: hidden;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}
-
+/* Медиа-запросы */
 @media (min-width: 768px) {
     body {
-        padding-top: 70px; /* Увеличиваем отступ для больших экранов */
+        padding-top: 80px;
     }
     
-    .container {
-        width: 80%;
+    header {
+        height: 80px;
     }
     
-    h2 {
-        font-size: 2.5em;
+    header .logo {
+        font-size: 1.5em;
+    }
+    
+    header nav a {
+        font-size: 1em;
     }
     
     #about .container {
@@ -347,30 +275,17 @@ footer {
     }
     
     #education .container {
-        flex-wrap: nowrap;
+        flex-direction: row;
+        text-align: left;
     }
     
     #education .education-img {
-        margin-right: 50px;
+        margin-right: 30px;
         margin-bottom: 0;
     }
     
     #education .education-text {
-        width: auto;
-        padding: 0;
-    }
-    
-    .list-skills li {
-        display: inline-block;
-        margin-right: 15px;
-    }
-    
-    header .logo {
-        font-size: 1.5em; /* Возвращаем стандартный размер логотипа */
-    }
-    
-    header nav a {
-        font-size: 0.9em; /* Возвращаем стандартный размер меню */
+        text-align: left;
     }
 }
 
@@ -380,6 +295,12 @@ footer {
     }
     
     #education .education-img {
-        margin-right: 100px;
+        margin-right: 50px;
+        width: 150px;
+        height: 150px;
+    }
+    
+    #portfolio .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
