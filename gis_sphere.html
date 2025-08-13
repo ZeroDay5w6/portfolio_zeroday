@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГИС - Портфолио</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+
+
+<body>
+
+
+
+
+
+
+    <header>
+        <div class="container">
+            <div class="logo"><a href="index.html">Назад в портфолио</a></div> <!-- Ссылка на главную -->
+            <nav>
+                <ul>
+                    <li><a href="index.html#about">Обо мне</a></li>
+                    <li><a href="index.html#portfolio">Портфолио</a></li>
+                    <li><a href="index.html#education">Сведения об образовании</a></li>
+                    <li><a href="index.html#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+
+    <section id="industry-description" class="section">
+        <div class="container">
+            <h2>Что я предлагаю в ГИС и ДЗЗ</h2>
+            <p class="skills_p">Я занимаюсь созданием геоинформационных решений, которые не только визуально эффективны, но и обеспечивают точный и удобный анализ пространственных данных:</p>        
+<center> <ol class="list-skills">
+                <li><b>Обработка и анализ спутниковых данных</b> (Landsat и Sentinel, проведение спектрального анализа и расчет индексов NDVI, NDWI и др., а также фильтрация, классификация тематическая обработка снимков)</li>
+                <li><b>Программирование и автоматизация </b>(Разработка скриптов для обработки ДЗЗ на JavaScript Google Earth Engine, Автоматизация расчетов и визуализации результатов)</li>
+                <li><b>ГИС-навыки </b>(Работа с геоданными в QGIS, ArcGIS и векторный и растровый анализ, пространственные запросы, Создание карт и визуализация данных)</li>
+                <li><b>Геокодирование </b> (преобразование текстовхых описаний местоположений (адреса, названия) в географические координаты (широту и долготу), что открывает возможности для дальнейшего анализа, визуализации и понимания пространственных закономерностей)</li>
+            </ol> </center>
+        </div>
+    </section>
+
+  
+
+
+
+
+
+
+    <section id="industry-portfolio" class="section">
+        <div class="container">
+            <h2>Примеры моих работ в ГИС и ДЗЗ</h2>
+            <div class="portfolio-grid">  <!-- Используем тот же portfolio-grid -->
+
+                <div class="portfolio-item">
+                    <a>
+                        <center> <img src="map_events.png" alt="Проект 1" class="project_gis"> </center>
+                        <h3>Исследование пространственного распределения событий в городской среде с применением методов геоаналитики</h3>
+                        <p>Тепловая карта
+
+<ul>
+<li> Метод визуализации плотности распределения событий в пространстве. </li>
+
+<li>Интенсивность явления отображается градиентом цвета: от минимальной (холодные тона) до максимальной (горячие точки).</li>
+
+<li>Позволяет выявлять зоны повышенной концентрации и паттерны пространственной агрегации.</li>
+</ul>
+
+PIP-анализ (Point-in-Polygon) с картограммой
+
+<ul>
+<li>Метод пространственного сопоставления точек событий с географическими полигонами (районами, кварталами).</li>
+
+<li>Позволяет определить, в каких зонах чаще встречаются изучаемые явления, и визуализировать их в виде хороплетной карты (картограммы).</li>
+
+<li>Используется для статистического сравнения между районами.</li>
+</ul>
+Применение тепловых карт и PIP-анализа позволило систематизировать пространственные данные и выявить скрытые закономерности, что может быть полезно для городского планирования, социологических исследований и управления ресурсами.
+</p>
+                    </a>
+                </div>
+
+                <div class="portfolio-item">
+                    <a>
+                        <center> <img src="map_vegetation.png" alt="Проект 2" class="project_gis"> </center> 
+                        <h3>Мониторинг состояния растительности и влажности на основе NDVI и NDMI и выделение зон соответсвующих определенным значениям</h3>
+                        <p>
+Логическая маска по диапазонам значений:
+<ul>
+<li> Используются логические операции gte() (greater than or equal – "больше или равно") и lte() (less than or equal – "меньше или равно") для создания бинарных масок, а затем оператор and() для их объединения. </li>
+</ul>
+Метод updateMask():
+<ul>
+<li>Маска, созданная на предыдущем шаге, содержит значения 1 (пиксели, подходящие под условия) и 0 (все остальные).</li>
+<li>image.updateMask(combinedMask) – оставляет в исходном изображении только те пиксели, где маска равна 1, а остальные делает прозрачными (игнорирует).</li>
+</ul>
+
+Метод Map.addLayer()
+<ul>
+<li>Задается цветовая палитра (palette), например, 'red' для выделения целевых зон.</li>
+</ul>
+
+Настоящий проект – это инструмент для точного, основанного на данных, управления природными ресурсами. Он превращает сырые спутниковые данные в понятные инсайты, экономя время и деньги на полевых исследованиях.
+
+
+</p>
+                    </a>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Секция "Призыв к действию" -->
+    <section id="industry-cta" class="section">
+        <div class="container">
+            <h2>Заинтересованы в ГИС?</h2>
+            <p>Свяжитесь со мной, чтобы обсудить ваш проект или работу!</p>
+            <a href="index.html#contact" class="button">Связаться со мной</a>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Портфолио</p>
+        </div>
+    </footer>
+
+</body>
+</html>
