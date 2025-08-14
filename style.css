@@ -252,14 +252,16 @@ footer {
 }
 
 .skills_p {
-    width: 100%;
+    width: 90vw; /* Ширина зависит от экрана */
+    max-width: 100%; /* Не выходит за границы */
     padding-top: 25px;
     padding-left: 5%;
     text-align: left;
 }
 
 .list-skills {
-    width: 100%;
+    width: 90vw; /* Ширина зависит от экрана */
+    max-width: 100%; /* Не выходит за границы */
     padding-top: 25px;
     padding-left: 5%;
     text-align: left;
@@ -387,6 +389,7 @@ footer {
     }
 
 }
+
 
 
 
