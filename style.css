@@ -394,11 +394,12 @@ footer {
     padding: 0 5px; /* Компактнее */
     transform: translateX(-10px);
   }
-  ul {
+  ol {
     font-size: 16px; /* Меньше шрифт */
     margin: 0 10px; /* Уже отступы */
     padding: 0 5px; /* Компактнее */
     transform: translateX(-10px);
   }
 }
+
 
