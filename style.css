@@ -90,7 +90,6 @@ header nav li {
 header nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 2em; /* Уменьшаем размер шрифта меню */
 }
 
 /* Остальные стили остаются без изменений */
@@ -402,4 +401,5 @@ footer {
     #education .education-img {
         margin-right: 100px;
     }
+
 }
