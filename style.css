@@ -81,7 +81,9 @@ header nav ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    font-size: 1%;
 }
+
 
 header nav li {
     margin-left: 10px; /* Уменьшаем отступы между пунктами меню */
@@ -391,6 +393,7 @@ footer {
     }
 
 }
+
 
 
 
