@@ -81,6 +81,7 @@ header nav ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+
 }
 
 header nav li {
@@ -90,6 +91,7 @@ header nav li {
 header nav a {
     color: #fff;
     text-decoration: none;
+
 }
 
 /* Остальные стили остаются без изменений */
@@ -401,5 +403,4 @@ footer {
     #education .education-img {
         margin-right: 100px;
     }
-
 }
