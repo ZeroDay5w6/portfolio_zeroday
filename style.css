@@ -388,4 +388,14 @@ footer {
     #education .education-img {
         margin-right: 100px;
     }
+     p {
+    font-size: 16px; /* Меньше шрифт */
+    margin: 0 10px; /* Уже отступы */
+    padding: 0 5px; /* Компактнее */
+  }
+  ul {
+    font-size: 16px; /* Меньше шрифт */
+    margin: 0 10px; /* Уже отступы */
+    padding: 0 5px; /* Компактнее */
+  }
 }
