@@ -252,14 +252,14 @@ footer {
 }
 
 .skills_p {
-    width: 100%;
+    width: 90%;
     padding-top: 25px;
     padding-left: 5%;
     text-align: left;
 }
 
 .list-skills {
-    width: 100%;
+    width: 90%;
     padding-top: 25px;
     padding-left: 5%;
     text-align: left;
@@ -387,4 +387,5 @@ footer {
     }
 
 }
+
 
