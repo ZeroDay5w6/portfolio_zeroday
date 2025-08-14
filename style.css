@@ -257,7 +257,7 @@ footer {
     padding-top: 25px;
     padding-left: 5%;
     text-align: left;
-    box-sizing: border-box;
+
 }
 
 .list-skills {
@@ -267,7 +267,6 @@ footer {
     padding-top: 25px;
     padding-left: 5%;
     text-align: left;
-    box-sizing: border-box;
 }
 
 .list-skills li {
@@ -392,6 +391,7 @@ footer {
     }
 
 }
+
 
 
 
